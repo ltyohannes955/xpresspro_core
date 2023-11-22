@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_22_124111) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_11_22_132335) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,19 +24,38 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_22_124111) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "journeys", force: :cascade do |t|
+    t.string "origin", null: false
+    t.string "destination", null: false
+    t.date "Departure_Date", null: false
+    t.time "Departure_time", null: false
+    t.string "list_of_Sightseeing", default: [], null: false, array: true
+    t.string "status", default: "Pending"
+    t.bigint "user_id", null: false
+    t.bigint "vehicle_id", null: false
+    t.bigint "driver_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["driver_id"], name: "index_journeys_on_driver_id"
+    t.index ["user_id"], name: "index_journeys_on_user_id"
+    t.index ["vehicle_id"], name: "index_journeys_on_vehicle_id"
+  end
+
   create_table "sightseeings", force: :cascade do |t|
     t.string "location", null: false
     t.string "description", null: false
     t.integer "price_per_hour", null: false
     t.integer "time_spent", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-  
+
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.integer "phone_number"
-    t.string "password"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "email", null: false
+    t.integer "phone_number", null: false
+    t.string "password", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
