@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :sightseeings
 
   resources :users
+  resources :seats
+
 
   resources :journeys
 
