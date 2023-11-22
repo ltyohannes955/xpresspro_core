@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   resources :drivers
   resources :sightseeings
   resources :users
+  resources :seats
+
 
 end
