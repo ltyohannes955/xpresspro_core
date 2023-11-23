@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   resources :seats
 
 
-  resources :journeys
-
+  resources :journeys do
+    member do
+      patch 'update_journey'
+      put 'cancel_journey'
+    end
+  end
 end
 
