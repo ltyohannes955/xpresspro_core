@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Sightseeings", type: :request do
-  include_examples("request_shared_spec", "sightseeings", 7)
+  include_examples("request_shared_spec", "sightseeings", 8)
 
   let(:valid_attributes) do
     {
@@ -9,6 +9,7 @@ RSpec.describe "Sightseeings", type: :request do
       description: Faker::Lorem.sentence,
       price_per_hour: 45,
       time_spent: 4,
+      image: Faker::Lorem.sentence,
     }
   end
 
@@ -18,6 +19,7 @@ RSpec.describe "Sightseeings", type: :request do
       description: Faker::Lorem.sentence,
       price_per_hour: 45,
       time_spent: 4,
+      image: Faker::Lorem.sentence,
     }
   end
   
