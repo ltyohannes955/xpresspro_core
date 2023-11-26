@@ -4,5 +4,6 @@ FactoryBot.define do
     description { Faker::Lorem.sentence }
     price_per_hour {45}
     time_spent {4}
+    image { Faker::Lorem.sentence}
   end
 end
