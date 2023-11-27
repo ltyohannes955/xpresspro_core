@@ -3,7 +3,7 @@
 # Create Drivers
 Driver.create!(
   driver_name: 'John Doe',
-  phone_number: 1234567890,
+  phone_number: 1890,
   email: 'john.doe@example.com',
   status: 'Available',
   language: 'English'
@@ -13,7 +13,7 @@ Driver.create!(
 # Drivers
 Driver.create!(
   driver_name: 'John Doe',
-  phone_number: 1234567890,
+  phone_number: 1890,
   email: 'john@example.com',
   status: 'Available',
   language: 'English'
@@ -21,7 +21,7 @@ Driver.create!(
 
 Driver.create!(
   driver_name: 'Jane Smith',
-  phone_number: 9876543210,
+  phone_number: 3210,
   email: 'jane@example.com',
   status: 'Available',
   language: 'English'
