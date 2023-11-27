@@ -27,15 +27,16 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: XpressPro_development
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  port: 5432
-  username: postgres
-  password: password
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # <<: *default
+  # database: XpressPro_development
+  # adapter: postgresql
+  # encoding: unicode
+  # host: localhost
+  # port: 5432
+  # username: postgres
+  # password: password
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: postgres://xpresspro_development_user:9bvup2PBAtsdbLBnH4Bga4lecioL82yC@dpg-cli6n3njc5ks73eqh6qg-a.oregon-postgres.render.com/xpresspro_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
