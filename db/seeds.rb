@@ -1,48 +1,4 @@
-# seed.rb
 
-# Create Drivers
-Driver.create!(
-  driver_name: 'John kane',
-  phone_number: 1890,
-  email: 'john.doe@google.com',
-  status: 'Available',
-  language: 'English'
-)
-# db/seeds.rb
-
-# Drivers
-Driver.create!(
-  driver_name: 'John Doe',
-  phone_number: 1890,
-  email: 'jafhn@example.com',
-  status: 'Available',
-  language: 'English'
-)
-
-Driver.create!(
-  driver_name: 'Jane Smith',
-  phone_number: 3210,
-  email: 'jane@google.com',
-  status: 'Available',
-  language: 'English'
-)
-
-# Users
-User.create!(
-  first_name: 'Alice',
-  last_name: 'Johnson',
-  email: 'sahalice@example.com',
-  phone_number: 1393,
-  password: 'password'
-)
-
-User.create!(
-  first_name: 'Bob',
-  last_name: 'Smith',
-  email: 'sbob@google.com',
-  phone_number: 9889,
-  password: 'password'
-)
 
 # Vehicles
 Vehicle.create!(
@@ -127,14 +83,6 @@ Journey.create!(
 # You can add more records as needed
 
 
-# Create Users
-User.create!(
-  first_name: 'fantu',
-  last_name: 'Dean',
-  email: 'fantau@google.com',
-  phone_number: 9889,
-  password: 'password123'
-)
 
 
 # Create Sightseeings
