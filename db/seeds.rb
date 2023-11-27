@@ -2,9 +2,9 @@
 
 # Create Drivers
 Driver.create!(
-  driver_name: 'John Doe',
+  driver_name: 'John kane',
   phone_number: 1890,
-  email: 'john.doe@example.com',
+  email: 'john.doe@google.com',
   status: 'Available',
   language: 'English'
 )
@@ -14,7 +14,7 @@ Driver.create!(
 Driver.create!(
   driver_name: 'John Doe',
   phone_number: 1890,
-  email: 'john@example.com',
+  email: 'jafhn@example.com',
   status: 'Available',
   language: 'English'
 )
@@ -22,7 +22,7 @@ Driver.create!(
 Driver.create!(
   driver_name: 'Jane Smith',
   phone_number: 3210,
-  email: 'jane@example.com',
+  email: 'jane@google.com',
   status: 'Available',
   language: 'English'
 )
@@ -31,7 +31,7 @@ Driver.create!(
 User.create!(
   first_name: 'Alice',
   last_name: 'Johnson',
-  email: 'alice@example.com',
+  email: 'sahalice@example.com',
   phone_number: 1393,
   password: 'password'
 )
@@ -39,7 +39,7 @@ User.create!(
 User.create!(
   first_name: 'Bob',
   last_name: 'Smith',
-  email: 'bob@example.com',
+  email: 'sbob@google.com',
   phone_number: 9889,
   password: 'password'
 )
@@ -129,9 +129,9 @@ Journey.create!(
 
 # Create Users
 User.create!(
-  first_name: 'Alice',
-  last_name: 'Doe',
-  email: 'alice.doe@example.com',
+  first_name: 'fantu',
+  last_name: 'Dean',
+  email: 'fantau@google.com',
   phone_number: 9889,
   password: 'password123'
 )
