@@ -8,6 +8,124 @@ Driver.create!(
   status: 'Available',
   language: 'English'
 )
+# db/seeds.rb
+
+# Drivers
+Driver.create!(
+  driver_name: 'John Doe',
+  phone_number: 1234567890,
+  email: 'john@example.com',
+  status: 'Available',
+  language: 'English'
+)
+
+Driver.create!(
+  driver_name: 'Jane Smith',
+  phone_number: 9876543210,
+  email: 'jane@example.com',
+  status: 'Available',
+  language: 'English'
+)
+
+# Users
+User.create!(
+  first_name: 'Alice',
+  last_name: 'Johnson',
+  email: 'alice@example.com',
+  phone_number: 1393,
+  password: 'password'
+)
+
+User.create!(
+  first_name: 'Bob',
+  last_name: 'Smith',
+  email: 'bob@example.com',
+  phone_number: 9889,
+  password: 'password'
+)
+
+# Vehicles
+Vehicle.create!(
+  vehicle_name: 'SUV1',
+  vehicle_model: 'Toyota RAV4',
+  person_capacity: 5,
+  price_per_day: 50,
+  luggage_capacity: 3,
+  weightcapacity: 1500,
+  sideview: 'suv1_side.jpg',
+  backview: 'suv1_back.jpg',
+  frontview: 'suv1_front.jpg'
+)
+
+Vehicle.create!(
+  vehicle_name: 'Sedan1',
+  vehicle_model: 'Honda Accord',
+  person_capacity: 4,
+  price_per_day: 40,
+  luggage_capacity: 2,
+  weightcapacity: 1200,
+  sideview: 'sedan1_side.jpg',
+  backview: 'sedan1_back.jpg',
+  frontview: 'sedan1_front.jpg'
+)
+
+# Sightseeings
+Sightseeing.create!(
+  location: 'Museum of Art',
+  description: 'A beautiful museum showcasing various art collections.',
+  price_per_hour: 10,
+  time_spent: 2,
+  image: 'museum_image.jpg'
+)
+
+Sightseeing.create!(
+  location: 'City Park',
+  description: 'A large park with scenic views and recreational activities.',
+  price_per_hour: 5,
+  time_spent: 1,
+  image: 'park_image.jpg'
+)
+
+# Seats
+Seat.create!(
+  seat_name: 'Front Seat',
+  seat_description: 'Comfortable front seat with extra legroom.',
+  image: 'front_seat.jpg'
+)
+
+Seat.create!(
+  seat_name: 'Back Seat',
+  seat_description: 'Spacious back seat with a view.',
+  image: 'back_seat.jpg'
+)
+
+# Journeys (assuming you have the required associations set up)
+Journey.create!(
+  origin: 'City A',
+  destination: 'City B',
+  Departure_Date: Date.today,
+  Departure_time: Time.now,
+  list_of_Sightseeing: ['Museum of Art', 'City Park'],
+  status: 'Pending',
+  user_id: User.first.id,
+  vehicle_id: Vehicle.first.id,
+  driver_id: Driver.first.id
+)
+
+Journey.create!(
+  origin: 'City C',
+  destination: 'City D',
+  Departure_Date: Date.today,
+  Departure_time: Time.now + 1.hour,
+  list_of_Sightseeing: ['City Park'],
+  status: 'Pending',
+  user_id: User.last.id,
+  vehicle_id: Vehicle.last.id,
+  driver_id: Driver.last.id
+)
+
+# You can add more records as needed
+
 
 # Create Users
 User.create!(
