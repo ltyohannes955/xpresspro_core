@@ -136,14 +136,6 @@ User.create!(
   password: 'password123'
 )
 
-# Create Vehicles
-Vehicle.create!(
-  vehicle_name: 'Car',
-  vehicle_model: 'Model X',
-  person_capacity: 4,
-  price_per_day: 50,
-  luggage_capacity: 2
-)
 
 # Create Sightseeings
 Sightseeing.create!(
