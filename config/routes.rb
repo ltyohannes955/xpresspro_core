@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :seats
 
 
-  resources :journeys, only: [:create]
+  resources :journeys
 
 end
 
