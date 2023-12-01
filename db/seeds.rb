@@ -143,36 +143,6 @@ Seat.create!(
   image: 'back_seat.jpg'
 )
 
-# Journeys (assuming you have the required associations set up)
-Journey.create!(
-  origin: 'City A',
-  destination: 'City B',
-  Departure_Date: Date.today,
-  Departure_time: Time.now,
-  list_of_Sightseeing: ['Museum of Art', 'City Park'],
-  status: 'Pending',
-  user_id: User.first.id,
-  vehicle_id: Vehicle.first.id,
-  driver_id: Driver.first.id
-)
-
-Journey.create!(
-  origin: 'City C',
-  destination: 'City D',
-  Departure_Date: Date.today,
-  Departure_time: Time.now + 1.hour,
-  list_of_Sightseeing: ['City Park'],
-  status: 'Pending',
-  user_id: User.last.id,
-  vehicle_id: Vehicle.last.id,
-  driver_id: Driver.last.id
-)
-
-# You can add more records as needed
-
-
-
-
 
 # Create Seats
 Seat.create!(
@@ -181,18 +151,7 @@ Seat.create!(
   image: 'front_seat.jpg' # Replace with the actual image filename or URL
 )
 
-# Create Journeys
-Journey.create!(
-  origin: 'New York',
-  destination: 'Los Angeles',
-  Departure_Date: Date.today,
-  Departure_time: Time.now,
-  list_of_Sightseeing: ['Times Square', 'Hollywood Sign'],
-  status: 'Pending',
-  user_id: User.first.id,
-  vehicle_id: Vehicle.first.id,
-  driver_id: Driver.first.id
-)
+
 
 # Add more realistic city names and locations as needed for additional records.
 
