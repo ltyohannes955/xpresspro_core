@@ -36,7 +36,7 @@ development:
   # username: postgres
   # password: password
   # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: postgres://xpresspro_development_user:9bvup2PBAtsdbLBnH4Bga4lecioL82yC@dpg-cli6n3njc5ks73eqh6qg-a.oregon-postgres.render.com/xpresspro_development
+  url: postgres://xpresspro_development2_user:gjaCBE2yZwRGnMCXrQWRLzey8GittCMl@dpg-clku2e6aov6s738nnnbg-a.oregon-postgres.render.com/xpresspro_development2
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
