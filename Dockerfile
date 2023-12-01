@@ -8,6 +8,8 @@ WORKDIR /app
 COPY . /app
 
 RUN bundle install
+Run rails db:drop
+Run rails db:create
 RUN rails db:migrate RAILS_ENV=development
 RUN rails db:seed
 EXPOSE 3000
