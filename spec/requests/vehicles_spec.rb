@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Vehicles", type: :request do
-  include_examples("request_shared_spec", "vehicles", 8)
+  include_examples("request_shared_spec", "vehicles", 12)
 
   let(:valid_attributes) do
     {
@@ -9,7 +9,11 @@ RSpec.describe "Vehicles", type: :request do
       vehicle_model: Faker::Lorem.word,
       luggage_capacity: 45,
       person_capacity: 4,
-      price_per_day: 130
+      price_per_day: 130,
+      weightcapacity: 240,
+      frontview: Faker::Lorem.sentence,
+      backview: Faker::Lorem.sentence,
+      sideview: Faker::Lorem.sentence
     }
   end
 
@@ -19,7 +23,12 @@ RSpec.describe "Vehicles", type: :request do
       vehicle_model: Faker::Lorem.word,
       luggage_capacity: 45,
       person_capacity: 4,
-      price_per_day: 130
+      price_per_day: 130,
+      weightcapacity: 240,
+      frontview: Faker::Lorem.sentence,
+      backview: Faker::Lorem.sentence,
+      sideview: Faker::Lorem.sentence
+
     }
   end
   
