@@ -9,6 +9,8 @@ COPY . /app
 
 RUN rm ./Gemfile.lock
 RUN bundle install
+RUN rails db:drop
+RUN rails db:create
 RUN rails db:migrate RAILS_ENV=development
 RUN rails db:seed
 EXPOSE 3000
