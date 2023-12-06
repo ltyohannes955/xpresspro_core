@@ -7,6 +7,7 @@ WORKDIR /app
 
 COPY . /app
 
+RUN rm ./Gemfile.lock
 RUN bundle install
 RUN rails db:migrate RAILS_ENV=development
 RUN rails db:seed
