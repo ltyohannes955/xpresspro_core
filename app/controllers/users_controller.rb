@@ -2,6 +2,8 @@ class UsersController < ApplicationController
     def create
         user = User.create!(user_params)
 
+        user.password = params[:user][:password]
+
         if user.valid?
             token = encode_token({ user_id: user.id })
             render json: { user: user, token: token, status: "ok"}, status: :ok
