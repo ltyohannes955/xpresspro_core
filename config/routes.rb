@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :sightseeings
 
   resources :users
+  post "/login", to: "users#login"
   resources :seats
   
   namespace :api do
