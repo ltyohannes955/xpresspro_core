@@ -12,7 +12,7 @@ RUN bundle install
 # RUN rails db:drop
 
 # RUN rails db:migrate RAILS_ENV=development
-RUN rails db:reset
+# RUN rails db:reset
 EXPOSE 3000
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
