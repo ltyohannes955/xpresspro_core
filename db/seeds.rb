@@ -151,6 +151,36 @@ Seat.create!(
   image: 'front_seat.jpg' # Replace with the actual image filename or URL
 )
 
+# seeds.rb
+
+# Create a sample user
+User.create!(
+  first_name: 'John',
+  last_name: 'Doe',
+  email: 'john.koe@example.com',
+  phone_number: '1230',
+  password: 'password123', # This will be hashed by has_secure_password
+  password_confirmation: 'password123'
+)
+
+User.create!(
+  first_name: 'Jane',
+  last_name: 'Smith',
+  email: 'jane.emith@example.com',
+  phone_number: '98543',
+  password: 'password456',
+  password_confirmation: 'password456'
+)
+
+
+Driver.create!(
+  driver_name: 'John Doe',
+  phone_number: 1234567890,
+  email: 'john@example.com',
+  status: 'Available',
+  language: 'English'
+)
+
 
 
 # Add more realistic city names and locations as needed for additional records.

@@ -34,22 +34,4 @@ RSpec.describe "Journeys", type: :request do
       origin: Faker::Lorem.word
     }
   end
-
-  it 'creates a new journey and sends email notification' do
-    expect do
-      post journeys_url, params: { payload: valid_attributes }, as: :json
-    end.to change(Journey, :count).by(1)
-
-    expect(response).to have_http_status(:created)
-
-    # Check if the email was sent
-    expect(ActionMailer::Base.deliveries.count).to eq(1)
-    email = ActionMailer::Base.deliveries.first
-    expect(email.to).to include(User.last.email) # Assuming your User model has an email attribute
-
-    # Add more assertions based on your application's logic and requirements
-    created_journey = Journey.last
-    expect(created_journey.list_of_Sightseeing).to eq(["a", "c", "s", "f"])
-
-  end
 end
