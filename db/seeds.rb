@@ -1,6 +1,3 @@
-
-
-# Vehicles
 Vehicle.create!(
   vehicle_name: 'SUV1',
   vehicle_model: 'Toyota RAV4',
@@ -97,7 +94,7 @@ Vehicle.create!(
   frontview: 'https://imgd.aeplcdn.com/1056x594/n/cw/ec/141857/kiger-exterior-right-front-three-quarter-5.jpeg?isig=0&q=80&wm=1'
 )
 
-# Sightseeings
+
 Sightseeing.create!(
   location: 'Berlin City',
   description: 'A beautiful museum showcasing various art collections.',
@@ -148,25 +145,15 @@ Seat.create!(
 Seat.create!(
   seat_name: 'Front Seat',
   seat_description: 'Comfortable front seat with a good view.',
-  image: 'front_seat.jpg' # Replace with the actual image filename or URL
+  image: 'front_seat.jpg' 
 )
 
-# seeds.rb
 
-# Create a sample user
-User.create!(
-  first_name: 'John',
-  last_name: 'Doe',
-  email: 'john.koe@example.com',
-  phone_number: '1230',
-  password: 'password123', # This will be hashed by has_secure_password
-  password_confirmation: 'password123'
-)
 
 User.create!(
   first_name: 'Jane',
   last_name: 'Smith',
-  email: 'jane.emith@example.com',
+  email: 'samabera03@gmail.com',
   phone_number: '98543',
   password: 'password456',
   password_confirmation: 'password456'
@@ -181,8 +168,3 @@ Driver.create!(
   language: 'English'
 )
 
-
-
-# Add more realistic city names and locations as needed for additional records.
-
-# You can add more records for other tables based on your requirements.
