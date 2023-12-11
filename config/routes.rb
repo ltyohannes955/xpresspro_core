@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :notifications, only: [:create]
   end 
 
-  resources :journeys
+  resources :journeys, only: %i[index show create update destroy]
 
 end
 
