@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   resources :users
   post "/login", to: "users#login"
   resources :seats
-
+  
+  namespace :api do
+    resources :notifications, only: [:create]
+  end 
 
   resources :journeys, only: %i[index show create update destroy]
 
