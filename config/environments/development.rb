@@ -1,5 +1,10 @@
 require "active_support/core_ext/integer/time"
 
+# Load environment variables from .env file in development
+require 'dotenv'
+Dotenv.load('.env')
+
+
 Rails.application.configure do
   config.cache_classes = false
 
@@ -12,18 +17,6 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
   # config/environments/development.rb
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: 'nigusaved@gmail.com',
-    port: 587,
-    domain: 'example.com',
-    user_name: 'nigussolomon',
-    password: 'jesus8is2lord8',
-    authentication: 'plain',
-    enable_starttls_auto: true
-  }
-
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
@@ -63,15 +56,15 @@ Rails.application.configure do
 
   config.hosts << "xpresspro-core.onrender.com"
 # config/environments/development.rb
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.example.com',
-    port:                 587,
-    domain:               'example.com',
-    user_name:            'your_username',
-    password:             'your_password',
-    authentication:       'plain',
+    address: ENV['EMAIL_HOST'],
+    port: ENV['EMAIL_PORT'],
+    domain: ENV['EMAIL_DOMAIN'],
+    user_name: ENV['EMAIL_HOST_USER'],
+    password: ENV['EMAIL_HOST_PASSWORD'],
+    authentication: 'plain',
     enable_starttls_auto: true
   }
 

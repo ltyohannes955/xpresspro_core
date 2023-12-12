@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN rm ./Gemfile.lock
+#RUN rm ./Gemfile.lock
 RUN bundle install
 # RUN rails db:drop
 

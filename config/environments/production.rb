@@ -1,5 +1,9 @@
 require "active_support/core_ext/integer/time"
 
+# Load environment variables from .env file in development
+require 'dotenv'
+Dotenv.load('.env')
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -60,6 +64,17 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: ENV['EMAIL_HOST'],
+    port: ENV['EMAIL_PORT'],
+    domain: ENV['EMAIL_DOMAIN'],
+    user_name: ENV['EMAIL_HOST_USER'],
+    password: ENV['EMAIL_HOST_PASSWORD'],
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
