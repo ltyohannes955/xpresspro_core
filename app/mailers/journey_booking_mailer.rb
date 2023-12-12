@@ -1,6 +1,6 @@
 # app/mailers/journey_booking_mailer.rb
 class JourneyBookingMailer < ApplicationMailer
-    default from: 'samuel.abera@bitscollege.edu.et' 
+    default from: "xpresspro.service@gmail.com"
 
     def booking_confirmation(user, journey)
       @user = user
