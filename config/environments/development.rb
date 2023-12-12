@@ -15,10 +15,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'samuel.abera@bitscollege.edu.et',
+    address: 'smtp.bitscollege.edu.et',
     port: 587,
     domain: 'bitscollege.edu.et',
-    user_name: 'samuel',
+    user_name: 'samuel.abera@bitscollege.edu.et',
     password: 'Sabe603610@',
     authentication: 'plain',
     enable_starttls_auto: true
