@@ -16,6 +16,8 @@ class Journey < ApplicationRecord
     private
   
     def send_booking_confirmation_email
-      JourneyBookingMailer.booking_confirmation(user, self).deliver_now
+      @user = User.find(user_id)
+      @journey = Journey.find(id) 
+      JourneyBookingMailer.booking_confirmation(@user, @journey).deliver_now
     end
 end
