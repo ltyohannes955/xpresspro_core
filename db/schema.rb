@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.0].define(version: 2023_11_22_132335) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_13_181205) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "comment", null: false
+    t.integer "stars", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_blogs_on_user_id"
+  end
 
   create_table "drivers", force: :cascade do |t|
     t.string "driver_name", null: false
@@ -30,7 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_22_132335) do
     t.string "destination", null: false
     t.date "Departure_Date", null: false
     t.time "Departure_time", null: false
-    t.string "list_of_Sightseeing", default: [], null: false, array: true
+    t.string "list_of_Sightseeing", default: [], array: true
     t.string "status", default: "Pending"
     t.bigint "user_id", null: false
     t.bigint "vehicle_id", null: false

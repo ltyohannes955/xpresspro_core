@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Journey Booking Confirmation</h1>
+    <p>Dear <%= @user.first_name %> <%= @user.last_name %>,</p>
+    <p>Your journey from <%= @journey.origin %> to <%= @journey.destination %> has been booked successfully.</p>
+    <!-- Add more details or customize the email content as needed -->
+  </body>
+</html>

@@ -14,4 +14,21 @@ RSpec.describe Journey, type: :model do
   ]
 
   include_examples('model_shared_spec', :journey, attributes)
+
+  describe 'callbacks' do
+    it 'sends a booking confirmation email after create' do
+      user = create(:user)
+      driver = create(:driver)
+      vehicle = create(:vehicle)
+
+      journey = build(:journey, user: user, driver: driver, vehicle: vehicle)
+
+      expect do
+        journey.save
+      end.to change(ActionMailer::Base.deliveries, :count).by(1)
+
+      email = ActionMailer::Base.deliveries.last
+      expect(email.to).to include(user.email)
+    end
+  end
 end

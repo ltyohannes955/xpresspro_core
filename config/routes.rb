@@ -6,12 +6,19 @@ Rails.application.routes.draw do
 
   resources :sightseeings
 
+  resources :blogs
+
   resources :users
   post "/login", to: "users#login"
   resources :seats
 
+  get "test/send_test_email", controller: :test, action: :send_test_email
+  
+  namespace :api do
+    resources :notifications, only: [:create]
+  end 
 
-  resources :journeys
+  resources :journeys, only: %i[index show create update destroy]
 
 end
 
