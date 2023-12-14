@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :sightseeings
 
+  resources :blogs
+
   resources :users
   post "/login", to: "users#login"
   resources :seats
