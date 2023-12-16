@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+    
+    def index
+        users = User.all
+        render json: { users: users.as_json(only: [:id, :first_name, :last_name, :email]) }, status: :ok
+      end
+    
     def create
         user = User.create!(user_params)
 
